@@ -13,14 +13,14 @@ function sbWebgl(ox,oy,r) {
         y = Math.sqrt(r*r-Math.abs(ox-x)*Math.abs(ox-x));
         vertices.push(x);
         vertices.push(y+oy);
-        vertices.push(0.133);
-        vertices.push(0.694);
-        vertices.push(0.298);
+        vertices.push(0.498);
+        vertices.push(0.498);
+        vertices.push(0.498);
         vertices.push(x);
         vertices.push(-y+oy);
-        vertices.push(0.133);
-        vertices.push(0.694);
-        vertices.push(0.298);
+        vertices.push(0.498);
+        vertices.push(0.498);
+        vertices.push(0.498);
     }
 }
 
