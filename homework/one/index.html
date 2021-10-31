@@ -3,11 +3,60 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <script type="text/javascript" src="../js/jquery-3.6.0.min.js"></script>
+    <script type="text/javascript" src="../js/ch01/Rotate.js"></script>
+    <style>
+        html,body{
+            margin: 0px;
+            padding: 0px;
+            width: 100%;
+            height: 100%;
+            -webkit-user-select:none;
+            -moz-user-select:none;
+            -ms-user-select:none;
+            user-select:none;
+        }
+        .left-btn{
+            margin-top: 350px;
+            width: 100px;
+            height: 100px
+        }
+        .right-btn{
+            margin-top: 350px;
+            width: 100px;
+            height: 100px
+        }
+        .arrow-btn{
+            width: 90px;
+            height: 90px;
+            float: left;
+            background: url(../../image/btns.png) no-repeat;
+        }
+        .left-btn .arrow-btn{background-position: 0 0;}
+        .left-btn:hover .arrow-btn{background-position: 0 -100px}
+        .right-btn .arrow-btn{background-position: -120px 0}
+        .right-btn:hover .arrow-btn{background-position: -120px -100px}
+        .cover .cover-imgs img{width: 216px;height: 216px;}
+        .cover .left-btn.arrow.none .arrow-btn {background-position: 0 -300px;}
+        .cover .right-btn.arrow.none .arrow-btn {background-position: -120px -300px;}
+    </style>
 </head>
 <body>
-    <p><a href="./a.html">任务a</a></p>
-    <p><a href="./b.html">任务b</a></p>
-    <p><a href="./c.html">任务c</a></p>
-    <p><a href="./d.html">任务d</a></p>
+    <div style="width: 100%;height: 100%;">
+            <div class="left-btn" style="float: left;margin-left: 20%">
+                <div class="arrow-btn" onclick="RotateLeft()"></div>
+            </div>
+            <div style="margin-top: 100px;margin-left: 50px; height: 680px;width: 680px; border: solid 1px black;float: left">
+                <iframe id="image" width="100%" height="90%" src="a.html" style="border: medium none"></iframe>
+                <p id="text" align="center"><a href="a.html" target="_blank">任务A</a></p>
+            </div>
+            <div class="right-btn" style="float: left;margin-left: 50px">
+                <div class="arrow-btn" onclick="RotateRight()"></div>
+            </div>
+    </div>
+<!--    <p><a href="./a.html">任务a</a></p>-->
+<!--    <p><a href="./b.html">任务b</a></p>-->
+<!--    <p><a href="./c.html">任务c</a></p>-->
+<!--    <p><a href="./d.html">任务d</a></p>-->
 </body>
 </html>
