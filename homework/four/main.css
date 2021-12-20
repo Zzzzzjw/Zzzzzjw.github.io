@@ -1,0 +1,106 @@
+.dayTitle {
+	box-sizing: border-box;
+	text-align: center;
+	width: 150px;
+	height: 40px;
+	line-height: 40px;
+	position: absolute;
+	top: 10px;
+	left: -10px;
+	z-index: 2;
+	border-top: 1px dashed;
+	border-bottom: 1px dashed;
+	border-right: 1px dashed;
+	/*参考颜色 #f8463f*/ 
+	box-shadow: 0 0 0 3px #f8463f, 0px 21px 5px -18px rgb(0 0 0 / 60%);
+	background: #f8463f;
+	text-transform: uppercase;
+	color: white;
+}
+
+.dayTitle:before {
+    content: "";
+    position: absolute;
+    height: 0;
+    width: 0;
+	/*参考颜色 #902c24*/ 
+    border-top: 8px solid #902c24;
+    border-left: 12px solid transparent;
+    top: 42px;
+    left: -2px;
+}
+
+.ot2main {
+	/* margin-top: 25px; */
+	margin-left: 17%;
+	line-height: 1.6;
+	float: left;
+	width: 66%;
+}
+
+.day {
+	display: block;
+	position: relative;
+	margin-bottom: 30px;
+	padding: 40px 20px;
+	box-shadow: rgb(0 0 0 / 10%) 0px 15px 35px 0px, rgb(0 0 0 / 7%) 0px 3px 10px 0px;
+	border-radius: 16px;
+	background-color: #fff;
+	transition: -webkit-transform .3s;
+	transition: transform .3s;
+	transition: transform .3s,-webkit-transform .3s;
+	transform-style: preserve-3d;
+}
+
+.day:before,.day:after {
+    position: absolute;
+    content: "";
+    bottom: 15px;
+    left: 10px;
+    width: 50%;
+    top: 80%;
+    max-width: 300px;
+    background: #777;
+    -webkit-box-shadow: 0 15px 10px #777;
+    -moz-box-shadow: 0 15px 10px #777;
+    box-shadow: 0 15px 10px #777;
+    transform: rotate(-3deg) translateZ(-10px);
+}
+
+.day:after {
+    transform: rotate(3deg) translateZ(-20px);
+    right: 10px;
+    left: auto;
+}
+
+.day:hover {
+    transform: scale(1.04) translateZ(10px);
+}
+
+.postTitle {
+    overflow: hidden;
+    margin-bottom: 10px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    font-size: 30px;
+    text-align: center;
+}
+a {
+    text-decoration: none;
+    color: #1879e1e8;
+}
+.postTitle a {
+    color: #333;
+    transition: all 0.2s;
+}
+.postTitle a:hover, .entrylistPosttitle:hover a {
+    color: #66B2FF;
+}
+
+.day .postDesc {
+    padding: 0 110px 0 10px;
+	text-align: left;
+    color: #bfbfbf;
+    line-height: 3.125rem;
+    font-size: 13px;
+}
