@@ -2,8 +2,8 @@
 	<head>
 		<title>实验四-02</title>
 		<script src="./three.min.js"></script>
-		<script src="./../end/three.js-dev/examples/js/controls/OrbitControls.js"></script>
-		<script src="./../end/jquery-3.6.0.min.js"></script>
+		<script src="./../end/js/OrbitControls.js"></script>
+		<script src="./../end/js/jquery-3.6.0.min.js"></script>
 		<link rel="stylesheet" href="./index2.css"></link>
 		<script src="./index2_2.js"></script>
 		<style>
@@ -79,6 +79,7 @@
 		</div>
 		
 		<script>
+			var kk;
 			var scene = new THREE.Scene();
 			// var AxesHelper = new THREE.AxesHelper(250)
 			// scene.add(AxesHelper);
@@ -169,7 +170,7 @@
 			
 			$("#minCube").change(function() {
 				$("#tmCube1").text("大小：" + parseInt($("#minCube").val())); 
-				var kk = parseInt($("#minCube").val());
+				kk = parseInt($("#minCube").val());
 				for(var i = 0;i < cubes.length; i++) {
 					cubes[i].scale.set(kk,kk,0); 
 				}

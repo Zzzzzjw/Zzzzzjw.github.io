@@ -77,7 +77,7 @@ function getCube(x,y) {
 	plane.position.y = y;
 	scene.add( plane );
 	cubes.push(plane);
-	
+	plane.scale.set(kk,kk,0); 
 	clearInterval(sc);
 	sc = setInterval(changeCubes,speed);
 }

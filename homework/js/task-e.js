@@ -136,10 +136,11 @@ function push_color(a,b,c,color) {
     }
 }
 function start() {
-    setInterval(solve,100);
+    solve();
 }
 function solve() {
-    document.getElementById("show2").value = ((parseInt(document.getElementById("show2").value))%360+1).toString();
-    console.log(document.getElementById("show2").value);
+	var x = (parseInt(document.getElementById("show2").value))%360;
+	if(x == 0) x = 360;
+    document.getElementById("show2").value = x.toString();
     main();
 }
